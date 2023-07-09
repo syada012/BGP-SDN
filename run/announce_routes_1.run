@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import sys
+import time
+
+messages = [
+    'announce route 192.0.2.0/24 next-hop 10.0.1.3',
+    'announce route 192.0.3.0/24 next-hop 10.0.1.3',
+]
+
+while True:
+    for message in messages:
+        sys.stdout.write(message + '\n')
+        sys.stdout.flush()
+        time.sleep(2)
+
